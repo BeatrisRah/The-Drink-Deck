@@ -2,11 +2,35 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<link rel="stylesheet" href="style/style.css">
+		<link rel="stylesheet" href="style/home.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>The Drink Deck</title>
 	</head>
 	<body>
+		
+		<nav>
+			<a class="nav-links" href="/">Home</a>
+			<a class="nav-links" href="/about">About</a>
+			<a class="nav-links" href="/contact">Contact</a>
+		</nav>
+		<main id="root">
+			<section id="home">
+				<div id="home-headings">
+					<h1>Welcome to The Drink Deck!</h1>
+					<p>Drinks for every occasion, right at your fingertips.</p>
+				</div>
+				
+				<div id="card-wrapper">
+					<div class="drink-card"></div>
+					<div class="drink-card"></div>
+					<div class="drink-card"></div>
+					<div class="drink-card"></div>
+					<div class="drink-card"></div>
+				</div>
+				
+			</section>
+		</main>
 		<script type="module" src="./src/app.js"></script>
 	</body>
 </html>

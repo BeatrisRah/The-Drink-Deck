@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: "Rubik", serif;
+    margin: 0%;
+}
+
+body {
+    background:
+        radial-gradient(circle at top right, #ff1d4a9a 0%, rgba(252, 70, 107, 0) 30%),
+        radial-gradient(circle at bottom left, #f99f6796 0%, rgba(252, 70, 107, 0) 45%),
+        url("/public/jakub-dziubak-gj7BLlSzIFs-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: 43%;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px 25px;
+    gap: 25px;
+}
+
+.nav-links {
+    padding: 5px;
+    font-size: 23px;
+    color: #E7D8C3;
+}
+
+main {
+    height: auto;
+    width: auto;
+
+}
+
+@media only screen and (max-width: 600px) {
+    .nav-links {
+        display: none;
+    }
+}

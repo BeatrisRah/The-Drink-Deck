@@ -1,0 +1,60 @@
+#home{
+    width: 90%;
+    min-height: 20vh;
+    margin: auto;
+}
+#home-headings{
+    color: #F4EEE4;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+#home-headings h1{
+    font-size: 45px;
+    font-weight: 400;
+}
+
+#card-wrapper{
+    max-width: 85%;
+    height: auto;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    margin: auto;
+    border: rgb(0, 255, 81) solid 2px;
+}
+
+.drink-card{
+    height: 25vh;
+    width: 25vh;
+    background-color: #F6DE87;
+    border: red solid 2px;
+    
+}
+
+
+@media only screen and (max-width: 600px) {
+    #home-headings{
+        flex-flow: column;
+    }
+
+    #home-headings h1{
+        font-size: 40px;
+    }
+    #home-headings p{
+        max-width: 20vh;
+        font-size: 15px;
+        text-align: right;
+        align-self: flex-end;
+    }
+    
+    #card-wrapper{
+        flex-wrap: wrap;
+    }
+    .drink-card{
+        height: 17vh;
+        width: 17vh;
+    }
+}
