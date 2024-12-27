@@ -27,7 +27,35 @@ nav {
     gap: 25px;
 }
 
+#hamburger-menu{
+    display: none;
+    width: 35px;
+    height: 35px;
+}
+.hamburger-content{
+    display: none;
+    position: absolute;
+    flex-flow: column;
+    top: 11%;
+    width: 30vh;
+    background-color: rgba(36, 19, 19, 0.797);
+    align-items: center;
+    text-align: center;
+    /* border: #E7D8C3 solid 2px; */
+}
+.hamburger-links{
+    width: 90%;
+    text-decoration: none;
+    padding: 10px;
+    color: #E7D8C3;
+    
+}
+.hamburger-links:not(:last-child){
+    border-bottom:#E7D8C3 solid 1px ;
+}
+
 .nav-links {
+    text-decoration: none;
     padding: 5px;
     font-size: 23px;
     color: #E7D8C3;
@@ -42,5 +70,14 @@ main {
 @media only screen and (max-width: 600px) {
     .nav-links {
         display: none;
+    }
+    #hamburger-menu{
+        display: inline-block;
+    }
+    div[toggle="closed"]{
+        display: none;
+    }
+    div[toggle="open"]{
+        display: flex;
     }
 }
