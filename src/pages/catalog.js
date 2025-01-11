@@ -47,7 +47,11 @@ export function catalog(ctx){
         name:'(hot) drink'},
         {imageURL:'https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_1:1/k%2Frecipes%2F2023%2F2023-08-starbucks-pink-drink%2Fstarbucks-pink-drink-3',
         name:'strawberry shake'
-        }
+        },
+        {imageURL:'https://www.vegrecipesofindia.com/wp-content/uploads/2018/02/cafe-style-hot-coffee-recipe-1.jpg',
+            name:'Beaten Coffee'},
+        {imageURL:'https://www.vegrecipesofindia.com/wp-content/uploads/2018/02/cafe-style-hot-coffee-recipe-1.jpg',
+                name:'Beaten Coffee'}
     
     ] //temporary
 
