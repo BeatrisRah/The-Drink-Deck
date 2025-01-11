@@ -14,6 +14,7 @@ page()
 function updateCTX(ctx, next){
     ctx.render = rerender;
     ctx.baseRender = baserender;
+    ctx.goTo = goTo;
     next()
 }
 function rerender(templ){
@@ -21,4 +22,8 @@ function rerender(templ){
 }
 function baserender(templ,container){
     render(templ,container)
+}
+
+function goTo(path){
+    page.redirect(path)
 }

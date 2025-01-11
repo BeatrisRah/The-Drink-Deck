@@ -1,6 +1,6 @@
 import { html } from "lit-html";
 
-const template = html`
+const template = (eventhandler) => html`
 <section id="home">
     <div id="home-headings">
         <h1>Welcome to The Drink Deck!</h1>
@@ -8,7 +8,7 @@ const template = html`
     </div>
         
     <div id="card-wrapper">
-        <div class="drink-card">
+        <div class="drink-card" category-data="sessonal" @click=${eventhandler} >
             <div class="card-content-wrap">
                 <p class="card-title">Sessonal</p>
             <img alt="all drink category" src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/64/external-drink-grocery-flatart-icons-outline-flatarticons-1.png" alt="external-drink-grocery-flatart-icons-outline-flatarticons-1"/>
@@ -16,7 +16,7 @@ const template = html`
             </div>
         </div>
 
-        <div class="drink-card">
+        <div class="drink-card" category-data="all" @click=${eventhandler} >
             <div class="card-content-wrap">
                 <p class="card-title">All</p>
                 <img src="public/all.png" alt="sesonal drinks category">
@@ -25,7 +25,7 @@ const template = html`
             
         </div>
         
-        <div class="drink-card">
+        <div class="drink-card" category-data="hot" @click=${eventhandler}>
             <div class="card-content-wrap">
                 <p class="card-title">Hot</p>
             <img width="100" height="100" src="https://img.icons8.com/fluency-systems-regular/100/cafe.png" alt="cafe"/>
@@ -33,7 +33,7 @@ const template = html`
             
         </div>
 
-        <div class="drink-card">
+        <div class="drink-card" category-data="cold" @click=${eventhandler}>
             <div class="card-content-wrap">
                 <p class="card-title">Cold</p>
                 <img width="100" height="100" src="https://img.icons8.com/pulsar-line/100/iced-coffee.png" alt="iced-coffee"/>
@@ -41,7 +41,7 @@ const template = html`
             </div>
             
         </div>
-        <div class="drink-card">
+        <div class="drink-card" category-data="alcohol" @click=${eventhandler}>
             <div class="card-content-wrap">
                 <p class="card-title">Alcohol</p>
                 <img width="96" height="96" src="https://img.icons8.com/pulsar-line/96/beach-cocktail.png" alt="beach-cocktail"/>
@@ -61,6 +61,13 @@ const template = html`
     </div>
 </section>`
 
+function categoryRedirect(e){
+    const category = e.currentTarget.getAttribute('category-data');
+    this.goTo(`/catalog/${category}`)
+    
+    
+}
+
 export function homeView(ctx){
-    ctx.render(template)
+    ctx.render(template(categoryRedirect.bind(ctx)))
 }

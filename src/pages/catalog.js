@@ -22,7 +22,16 @@ const drinks_titles = {
         <p>Cozy up with warm drinks that soothe the soul. Perfect for chilly nights.</p>`,
     all: html`
         <h1>ALL DRINKS</h1>
-        <p>Cozy up with warm drinks that soothe the soul. Perfect for chilly nights.</p>`,
+        <p></p>`,
+    cold:html`
+        <h1>COLD DRINKS</h1>
+        <p>Cool, crisp, and refreshing!</p>`,
+    sessonal:html`
+        <h1>SESSONAL DRINKS</h1>
+        <p>Sip the flavors of the season with drinks inspired by fresh ingredients and festive vibes.</p>`,
+    alcohol:html`
+        <h1>ALCOHOL DRINKS</h1>
+        <p>From classic cocktails to innovative twists, discover recipes that make happy hour even happier.</p>`,
 }
 
 const card_template = (drink) => html`
@@ -43,8 +52,22 @@ export function catalog(ctx){
     ] //temporary
 
     let drink_title = '';
-    if(drink_category == 'all'){
-        drink_title = drinks_titles.all;
+    switch(drink_category){
+        case "all":
+            drink_title = drinks_titles.all;
+            break;
+        case 'hot':
+            drink_title = drinks_titles.hot;
+            break;
+        case 'cold':
+            drink_title = drinks_titles.cold;
+            break;
+        case 'sessonal':
+            drink_title = drinks_titles.sessonal;
+            break;
+        case 'alcohol':
+            drink_title = drinks_titles.alcohol;
+            break;
     }
     
     ctx.render(section(drink_title, drinks))
