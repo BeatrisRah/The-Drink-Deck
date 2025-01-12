@@ -46,6 +46,10 @@
     border-radius: 10px;
 }
 
+.drink-card:hover{
+    transform: translateY(-2px)
+}
+
 .card-content-wrap{
     display: flex;
     flex-flow: column;
@@ -98,6 +102,10 @@
 }
 .home-button span{
     display: none;
+}
+
+.home-button:hover {
+    transform: translateY(-2px)
 }
 
 @media screen and (max-width: 1050px) and (min-width: 780px){
