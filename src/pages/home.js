@@ -52,7 +52,7 @@ const template = (eventhandler) => html`
     </div>
     
     <div class="home-button">
-        <a>
+        <a href="/pick-ingredients">
             Not sure? Search by the ingredients you have!
         </a>
         <span>

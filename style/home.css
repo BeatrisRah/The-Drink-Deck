@@ -99,6 +99,7 @@
 .home-button a{
     color: #e4b487;
     font-size: 20px;
+    text-decoration: none;
 }
 .home-button span{
     display: none;
