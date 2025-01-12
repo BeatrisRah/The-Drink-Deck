@@ -106,8 +106,17 @@
 
 
 @media screen and (max-width: 430px){
+    .catalog_titles{
+        background-color: #531B24;
+        width: 100%;
+        text-align: center;
+    }
+
+    .catalog_titles h1{
+        font-size: 25px;
+    }
     .catalog_titles p {
-        font-size: 15px;
+        display: none;
     }
     .catalog_content{
         margin-top: 5vh;
