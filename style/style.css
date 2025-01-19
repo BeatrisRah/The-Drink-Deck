@@ -7,17 +7,14 @@
 }
 
 body {
+    width: 100vw;
+    height: 100vh;
     background:
         radial-gradient(circle at top right, #ff1d4a64 0%, rgba(252, 70, 107, 0) 30%),
         radial-gradient(circle at center left, #ff1d4a41 0%, rgba(252, 70, 107, 0) 40%),
         radial-gradient(circle at bottom right, #e279338a 0%, rgba(252, 70, 107, 0) 40%),
         radial-gradient(circle at bottom right, #e3dfc937 0%, rgba(252, 70, 107, 0) 25%),
         #2A2624;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-position-y: 43%;
-    background-attachment: fixed;
-    background-size: cover;
 }
 
 nav {
