@@ -2,12 +2,24 @@ import { html } from "lit-html";
 
 const template = (eventhandler) => html`
 <section id="home">
-    <div id="hero-image-container">
-        <div id="home-headings">
-            <h1>Welcome to The Drink Deck!</h1>
-            <p>Drinks for every occasion, right at your fingertips.</p>
-        </div>
+    <div id="home-wrapper">
+        <div id="hero-image-container">
+            <div id="home-headings">
+                <h1>Welcome to The Drink Deck!</h1>
+                <p>Drinks for every occasion, right at your fingertips.</p>
+            </div>
         <img src="/public/jakub-dziubak-gj7BLlSzIFs-unsplash.jpg">
+
+        </div>
+
+        <div class="home-button">
+            <a href="/pick-ingredients">
+                Not sure? Search by the <b><u>ingredients you have!</u></b>
+            </a>
+            <span>
+                Search by ingredients
+            </span>
+        </div>
     </div>
     
         
@@ -57,17 +69,11 @@ const template = (eventhandler) => html`
                 
             </div>
         </div>
+
         
     </div>
     
-    <!-- <div class="home-button">
-        <a href="/pick-ingredients">
-            Not sure? Search by the ingredients you have!
-        </a>
-        <span>
-            Search by ingredients
-        </span>
-    </div> -->
+    
 </section>`
 
 function categoryRedirect(e){
