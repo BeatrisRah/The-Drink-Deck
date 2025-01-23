@@ -1,4 +1,5 @@
 import { html } from "lit-html";
+import dbApi from "../dbApi.js";
 
 const section = (category, drink_array) => html`
 <section class="catalog">
@@ -16,6 +17,13 @@ const section = (category, drink_array) => html`
 
     
 </section>`
+
+const card_template = (drink) => html`
+<div class="catalog_card">
+    <img src="${drink.imageURL}">
+    <p class="catalog_card_title">${drink.name}</p>
+</div>`
+
 const drinks_titles = {
     hot: html`
         <h1>HOT DRINKS</h1>
@@ -34,26 +42,10 @@ const drinks_titles = {
         <p>From classic cocktails to innovative twists, discover recipes that make happy hour even happier.</p>`,
 }
 
-const card_template = (drink) => html`
-<div class="catalog_card">
-    <img src="${drink.imageURL}">
-    <p class="catalog_card_title">${drink.name}</p>
-</div>`
 
-export function catalog(ctx){
+export async function catalog(ctx){
     const drink_category = ctx.params.category;
-    const drinks = [
-        {imageURL:'https://hips.hearstapps.com/hmg-prod/images/delish-220517-dirty-shirley-cocktail-001-ab-web-1657145301.jpg?crop=0.828xw:0.829xh;0.123xw,0.0932xh&resize=980:*',
-        name:'(hot) drink'},
-        {imageURL:'https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_1:1/k%2Frecipes%2F2023%2F2023-08-starbucks-pink-drink%2Fstarbucks-pink-drink-3',
-        name:'strawberry shake'
-        },
-        {imageURL:'https://www.vegrecipesofindia.com/wp-content/uploads/2018/02/cafe-style-hot-coffee-recipe-1.jpg',
-            name:'Beaten Coffee'},
-        {imageURL:'https://www.vegrecipesofindia.com/wp-content/uploads/2018/02/cafe-style-hot-coffee-recipe-1.jpg',
-                name:'Beaten Coffee'}
-    
-    ] //temporary
+    let drinks = await dbApi.fetchData();
 
     let drink_title = '';
     switch(drink_category){
@@ -73,6 +65,11 @@ export function catalog(ctx){
             drink_title = drinks_titles.alcohol;
             break;
     }
+
+    if(drink_category !== 'all'){
+        drinks = Object.values(drinks).filter(el => el.category == drink_category)
+    }
+    
     
     ctx.render(section(drink_title, drinks))
 }
