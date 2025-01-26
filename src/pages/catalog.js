@@ -68,6 +68,8 @@ export async function catalog(ctx){
 
     if(drink_category !== 'all'){
         drinks = Object.values(drinks).filter(el => el.category == drink_category)
+    } else{
+        drinks = Object.values(drinks)
     }
     
     
