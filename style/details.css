@@ -45,7 +45,8 @@
 }
 
 .details_desription_titels > h1 {
-    font-size: 70px;
+    font-size: 60px;
+    width: 85%;
     letter-spacing: 5px;
     color: #2A2624;
 }
@@ -53,9 +54,10 @@
 .details_desription_titels > p {
     font-size: 19px;
     font-style: italic;
-    font-weight: 200;
-    margin-bottom: 1em;
+    font-weight: 400;
+    margin-bottom: 3em;
     max-width: 80%;
+    color: #7f433c;
 }
 
 .details_desription_titels > a {
@@ -63,7 +65,8 @@
     font-style: italic;
     font-weight: 400;
     margin-bottom: 1em;
-    
+    color: #3E3B39;
+    text-decoration: none;
 }
 
 .details_tags{
@@ -73,6 +76,7 @@
 .details_tags > button {
     width: 15%;
     height: 90%;
+    margin-right: 1em;
     border-radius: 30px;
     background-color: #FF454F;
     border: #FF454F 3px solid;

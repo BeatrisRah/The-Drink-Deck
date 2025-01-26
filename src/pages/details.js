@@ -1,21 +1,21 @@
 import { html } from "lit-html";
+import dbApi from "../dbApi";
 
-const templ = html`
+const templ = (drink) => html`
 <section id='description_page'>
 
     <div id='details_wrapper'>
         <div class="details_upper">
             <div class="details_img_div">
-                <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F4672770.jpg&q=60&c=sc&poi=auto&orient=true&h=512" >
+                <img src="${drink.imageURL}" alt="${drink.name}" >
             </div>
             
             <div class="details_desription_titels">
-                <h1>Lava Drink</h1>
-                <p>A cool drink that uh helps u.. hydrate? Can you tell this is example text?</p>
-                <a>@original recipe</a>
+                <h1>${drink.name}</h1>
+                <p>${drink.description}</p>
+                <a href='${drink.originURL}' >@original recipe</a>
                 <div class="details_tags" >
-                    <button>HOT</button>
-                    <button>NEW</button>
+                    ${drink.category.map(el => html`<button>${el.toUpperCase()}</button>`)}
                 </div>
             </div>
         </div>
@@ -23,20 +23,17 @@ const templ = html`
             <div class="details_ingredients">
                 <h1>Ingredients</h1>
                 <ul>
-                    <li><b>200ml</b> milk</li>
-                    <li>200ml milk</li>
-                    <li>200ml milk</li>
+                    ${drink.ingredients.map(el => html`<li><b>${el.amount}</b> ${el.name}</li>`)}
                 </ul>
             </div>
             <div class="details_preparation" >
                 <h1>Preparation</h1>
                 <ol>
+                    ${drink.preparation.map(el => html`
                     <li class="li_wrapper">
-                        <p>You do that thrn mix that and sm sm and then another sm and yeH. You do that thrn mix that and sm sm and then another sm and yeH. You do that thrn mix that and sm sm and then another sm and yeH</p>
+                        <p>${el}</p>
                     </li>
-                    <li class="li_wrapper">
-                        <p>You do that thrn mix that and sm sm and then another sm and yeH</p>
-                    </li>
+                    `)}
                 </ol>
             </div>
         </div>
@@ -44,6 +41,10 @@ const templ = html`
 </section>
 `
 
-export function detailsPage(ctx){
-    ctx.render(templ)
+export async function detailsPage(ctx){
+    const drinkID = ctx.params.drinkID;
+    const drink = await dbApi.getOne(drinkID);
+    
+    
+    ctx.render(templ(drink))
 }
