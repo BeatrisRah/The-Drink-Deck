@@ -5,7 +5,10 @@ const templ = html`
 
     <div id='details_wrapper'>
         <div class="details_upper">
-            <img>
+            <div class="details_img_div">
+                <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F4672770.jpg&q=60&c=sc&poi=auto&orient=true&h=512" >
+            </div>
+            
             <div class="details_desription_titels">
                 <h1>Lava Drink</h1>
                 <p>A cool drink that uh helps u.. hydrate? Can you tell this is example text?</p>
