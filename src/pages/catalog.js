@@ -1,7 +1,7 @@
 import { html } from "lit-html";
 import dbApi from "../dbApi.js";
 
-const section = (category, drink_array) => html`
+const section = (category, drink_array, eventHandler) => html`
 <section class="catalog">
         
         <div class="catalog_titles">
@@ -9,7 +9,7 @@ const section = (category, drink_array) => html`
         </div>
         <div class="catalog_content">
             <div class="catalog_card_wrapper">
-                ${drink_array.map(card_template)}
+                ${drink_array.map(el => card_template(el, eventHandler))}
                 
             </div>
             
@@ -18,8 +18,8 @@ const section = (category, drink_array) => html`
     
 </section>`
 
-const card_template = (drink) => html`
-<div class="catalog_card">
+const card_template = (drink, eventHandler) => html`
+<div class="catalog_card" drink-id="${drink.id}" @click=${eventHandler} >
     <img src="${drink.imageURL}">
     <p class="catalog_card_title">${drink.name}</p>
 </div>`
@@ -73,5 +73,11 @@ export async function catalog(ctx){
     }
     
     
-    ctx.render(section(drink_title, drinks))
+    ctx.render(section(drink_title, drinks, redirectToDetails.bind(ctx)))
+}
+
+function redirectToDetails(e){
+    const drinkId = e.currentTarget.getAttribute('drink-id');
+    
+    this.goTo(`/catalog/${drinkId}`)
 }
