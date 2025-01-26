@@ -19,22 +19,22 @@ const navTempl = (clickHandler) => html`
 </div>`
 
 
-export function updateNav(ctx, next){
+export function updateNav(ctx, next) {
     ctx.baseRender(navTempl(hamburgerMenu), nav)
     next()
 }
 
-function hamburgerMenu(e){
+function hamburgerMenu(e) {
     const hamburgerContent = e.currentTarget.nextElementSibling;
     const isClosed = hamburgerContent.getAttribute('toggle') == 'closed' ? true : false;
-    
-    if(isClosed){
+
+    if (isClosed) {
         // hamburgerContent.style.display = 'flex';
         hamburgerContent.setAttribute('toggle', 'open')
-    } else{
+    } else {
         // hamburgerContent.style.display = 'none';
         hamburgerContent.setAttribute('toggle', 'closed')
     }
-    
-    
+
+
 }

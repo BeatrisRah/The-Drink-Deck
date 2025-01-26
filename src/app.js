@@ -12,7 +12,7 @@ page(updateCTX)
 page(updateNav)
 page('/',homeView)
 page('/catalog/:category', catalog)
-page('/catalog/details/:drinkID', detailsPage)
+page('/catalog/:category/:drinkID', detailsPage)
 page()
 
 
@@ -22,6 +22,7 @@ function updateCTX(ctx, next){
     ctx.render = rerender;
     ctx.baseRender = baserender;
     ctx.goTo = goTo;
+    
     next()
 }
 function rerender(templ){
@@ -32,5 +33,5 @@ function baserender(templ,container){
 }
 
 function goTo(path){
-    page.redirect(path)
+    page(path)
 }
