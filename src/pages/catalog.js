@@ -79,5 +79,5 @@ export async function catalog(ctx){
 function redirectToDetails(e){
     const drinkId = e.currentTarget.getAttribute('drink-id');
     
-    this.goTo(`/catalog/${drinkId}`)
+    this.goTo(`/catalog/details/${drinkId}`)
 }

@@ -3,6 +3,7 @@ import page from "page";
 import { homeView } from "./pages/home.js";
 import { updateNav } from "./nav.js";
 import { catalog } from "./pages/catalog.js";
+import { detailsPage } from "./pages/details.js";
 
 
 
@@ -11,6 +12,7 @@ page(updateCTX)
 page(updateNav)
 page('/',homeView)
 page('/catalog/:category', catalog)
+page('/catalog/details/:drinkID', detailsPage)
 page()
 
 
