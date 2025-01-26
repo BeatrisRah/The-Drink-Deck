@@ -23,12 +23,17 @@ const templ = html`
             <div class="details_ingredients">
                 <h1>Ingredients</h1>
                 <ul>
+                    <li><b>200ml</b> milk</li>
+                    <li>200ml milk</li>
                     <li>200ml milk</li>
                 </ul>
             </div>
             <div class="details_preparation" >
-                <h1>Ingredients</h1>
+                <h1>Preparation</h1>
                 <ol>
+                    <li class="li_wrapper">
+                        <p>You do that thrn mix that and sm sm and then another sm and yeH. You do that thrn mix that and sm sm and then another sm and yeH. You do that thrn mix that and sm sm and then another sm and yeH</p>
+                    </li>
                     <li class="li_wrapper">
                         <p>You do that thrn mix that and sm sm and then another sm and yeH</p>
                     </li>

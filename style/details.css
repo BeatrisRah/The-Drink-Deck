@@ -14,7 +14,7 @@
 }
 
 .details_upper{
-    /* border: blue 1px solid; */
+    
     width: 95%;
     height: 65%;
     margin: auto;
@@ -84,4 +84,54 @@
 .details_tags button:nth-child(2){
     background-color: transparent;
     color: #FF454F;
+}
+
+.details_bottom{
+    width: 98%;
+    /* height: 20vh; */
+    background-color: #ab7b7d33;
+    border-radius: 10px;
+    margin: auto;
+    display: flex;
+    padding-top: 1em;
+    padding-bottom: 1.5em;
+}
+
+.details_bottom h1 {
+    color: #E62E38;
+    padding: 1em;
+}
+
+.details_ingredients{
+    width: 45%;
+    /* border: blue 1px solid; */
+}
+
+.details_ingredients ul {
+    list-style: none;
+}
+
+.details_ingredients li {
+    width: 90%;
+    border-bottom: #7f3537ac 1px solid;
+    font-size: 19px;
+    padding: 10px;
+}
+
+.details_preparation{
+    width: 50%;
+}
+
+.details_preparation ol li{
+    margin-bottom: 10px;
+}
+
+.details_preparation ol li::marker{
+    color: #7F3538;
+    font-weight: 500;
+}
+
+.details_preparation p {
+    border-left: 2px solid #7F3538;
+    padding: 10px;
 }
