@@ -8,6 +8,7 @@ import { detailsPage } from "./pages/details.js";
 
 
 const root = document.getElementById('root');
+const body = document.querySelector('body')
 page(updateCTX)
 page(updateNav)
 page('/',homeView)
@@ -22,6 +23,7 @@ function updateCTX(ctx, next){
     ctx.render = rerender;
     ctx.baseRender = baserender;
     ctx.goTo = goTo;
+    ctx.changeBody = changeBody;
     
     next()
 }
@@ -34,4 +36,8 @@ function baserender(templ,container){
 
 function goTo(path){
     page(path)
+}
+
+function changeBody(size){
+    body.style.height = size;
 }

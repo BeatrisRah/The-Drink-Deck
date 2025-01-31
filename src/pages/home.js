@@ -84,5 +84,6 @@ function categoryRedirect(e){
 }
 
 export function homeView(ctx){
+    ctx.changeBody('100vh')
     ctx.render(template(categoryRedirect.bind(ctx)))
 }

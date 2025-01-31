@@ -1,9 +1,10 @@
 #description_page{
     width: 100%;
-    height: auto;
+    height: 100vh;
     margin-top: 2em;
-
+    /* border: green 1px solid; */
 }
+
 
 #details_wrapper{
     width: 75%;

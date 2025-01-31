@@ -45,6 +45,6 @@ export async function detailsPage(ctx){
     const drinkID = ctx.params.drinkID;
     const drink = await dbApi.getOne(drinkID);
     
-    
+    ctx.changeBody('70vw')
     ctx.render(templ(drink))
 }

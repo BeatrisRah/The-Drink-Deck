@@ -72,7 +72,6 @@ export async function catalog(ctx){
         drinks = Object.values(drinks)
     }
     
-    
     ctx.render(section(drink_title, drinks, redirectToDetails.bind(ctx)))
 }
 
