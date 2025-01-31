@@ -14,7 +14,7 @@
 }
 
 .details_upper{
-    
+    /* border:  red 1px solid; */
     width: 95%;
     height: 65%;
     margin: auto;
@@ -23,7 +23,9 @@
 }
 
 .details_img_div{
-    width: 40%;
+    /* border:  red 1px solid; */
+    width: 50%;
+    min-width: 30%;
     display: flex;
 
 }
@@ -33,11 +35,10 @@
     border-radius: 5px;
     height: 90%;
     margin-left: auto;
-
+    width: 100%;
 }
 
 .details_desription_titels{
-    
     flex-grow: 1;
     margin-top: 5em;
     display: flex;
