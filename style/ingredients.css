@@ -1,0 +1,79 @@
+#pick_ingredients_page{
+    /* background-color: rgba(240, 248, 255, 0.301); */
+    width: 95%;
+    margin: auto;
+    height: fit-content;
+}
+
+#pick_ingredients_page form{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.ingredienst_div{
+    border: 2px solid #EDB47F;
+    border-radius: 5px;
+    width: 30%;
+    padding: 10px;
+}
+
+.ingredienst_div:nth-child(n + 3){
+    width: 61%;
+}
+
+.ingredienst_div h2 {
+    background-color: #EDB47F;
+    width: 95%;
+    margin: auto;
+    margin-bottom: 1.5rem;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.ingredienst_div h3{
+    font-weight: 400;
+    font-style: italic;
+    font-size: 20px;
+    color: #E7D8C3;
+    border-bottom: #E7D8C3 1px solid;
+    padding: 10px;
+    margin-bottom: 1rem;
+}
+
+.svg_div{
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    margin: auto;
+    gap: 5px;
+    padding: 5px;
+}
+
+.ingredient_button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 15%;
+}
+
+.ingredient_button button{
+    /* margin-right: auto; */
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    border: none;
+    background-color: #E7D8C3;
+}
+
+.ingredient_button p {
+    color: #E7D8C3;
+    font-size: 15px;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 0.5rem;
+}
