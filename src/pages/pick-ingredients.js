@@ -45,6 +45,12 @@ const templ =(list)=> html`
                 ${list['fruits'].map(iTemp)}
             </div>
         </div>
+        <div class="ingredienst_div">
+            <h2>Spices & Herbs</h2>
+            <div class="svg_div">
+                
+            </div>
+        </div>
     </form>
 </div>`
 

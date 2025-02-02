@@ -36,6 +36,8 @@
 }
 
 .ingredienst_div h3{
+    width: 90%;
+    margin: auto;
     font-weight: 400;
     font-style: italic;
     font-size: 20px;
