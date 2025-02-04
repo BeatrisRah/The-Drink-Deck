@@ -9,9 +9,9 @@ const iTemp = (i) => html`
     <p>${i.p}</p>
 </div>`
 
-const templ =(list)=> html`
+const templ =(list, formEvent)=> html`
 <div id='pick_ingredients_page'>
-    <form @submit=${formSubmit}>
+    <form @submit=${formEvent}>
         <div class='ingredienst_div'>
             <h2>Dairy & Non-Dairy Alternatives</h2>
             <h3>Milk</h3>
@@ -89,11 +89,15 @@ function formSubmit(e){
     .filter(button => button.classList.contains('selected'))
     .map(button => button.getAttribute('aria-label'));
     
-    console.log(selectedLabels);
+    if (selectedLabels.length > 0) {
+        this.goTo(`/pick-ingredients/${encodeURIComponent(selectedLabels.join(','))}`);
+    } else {
+        alert("Please select at least one ingredient.");
+    }
     
 }
 
 
 export function pickIngredienst(ctx) {
-    ctx.render(templ(list))
+    ctx.render(templ(list, formSubmit.bind(ctx)))
 }

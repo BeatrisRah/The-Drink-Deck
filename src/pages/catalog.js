@@ -18,7 +18,7 @@ const section = (category, drink_array, eventHandler) => html`
     
 </section>`
 
-const card_template = (drink, eventHandler) => html`
+export const card_template = (drink, eventHandler) => html`
 <div class="catalog_card" drink-id="${drink.id}" @click=${eventHandler} >
     <img src="${drink.imageURL}">
     <p class="catalog_card_title">${drink.name}</p>
@@ -75,7 +75,7 @@ export async function catalog(ctx){
     ctx.render(section(drink_title, drinks, redirectToDetails.bind(ctx)))
 }
 
-function redirectToDetails(e){
+export function redirectToDetails(e){
     const drinkId = e.currentTarget.getAttribute('drink-id'); 
     
     this.goTo(`/catalog/${this.params.category}/${drinkId}`)
