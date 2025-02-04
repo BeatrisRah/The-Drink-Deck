@@ -34,6 +34,10 @@ async function getOne(id) {
     }
 }
 
+function normalizeIngredientName(name) {
+    return name.replace(/\b(juice|powder|syrup|dried|fresh|extract)\b/g, '').trim().toLowerCase();
+}
+
 async function getByingredients(ingredients) {
     const drinksRef = ref(database, 'drinks');
     const snapshot = await get(drinksRef);
@@ -48,9 +52,12 @@ async function getByingredients(ingredients) {
 
     for (const drinkId in drinksData) {
         const drink = drinksData[drinkId];
-        const drinkIngredients = drink.ingredients.map(ingredient => ingredient.name);
+        // const drinkIngredients = drink.ingredients.map(ingredient => ingredient.name);
+        const drinkIngredients = drink.ingredients.map(ingredient => normalizeIngredientName(ingredient.name));
 
-        if (ingredients.some(ingredient => drinkIngredients.includes(ingredient))) {
+        const normalizedSearchIngredients = ingredients.map(normalizeIngredientName);
+
+        if (normalizedSearchIngredients.some(ingredient => drinkIngredients.includes(ingredient))) {
             matchingDrinks.push({ id: drinkId, ...drink });
         }
     }
