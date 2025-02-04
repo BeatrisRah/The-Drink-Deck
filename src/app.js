@@ -18,6 +18,7 @@ page('/catalog/:category', catalog)
 page('/catalog/:category/:drinkID', detailsPage)
 page('/pick-ingredients', pickIngredienst)
 page('/pick-ingredients/:ingredients', recipeResultsPage)
+page('/pick-ingredients/details/:drinkID', detailsPage)
 page()
 
 

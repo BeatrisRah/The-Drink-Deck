@@ -43,8 +43,17 @@ const templ = (drink) => html`
 
 export async function detailsPage(ctx){
     const drinkID = ctx.params.drinkID;
-    const drink = await dbApi.getOne(drinkID);
+    console.log(drinkID);
     
-    ctx.changeBody('70vw')
-    ctx.render(templ(drink))
+    
+    try{
+        const drink = await dbApi.getOne(drinkID);
+        ctx.changeBody('70vw')
+        ctx.render(templ(drink))
+    } catch(err){
+        console.log(err);
+        
+    }
+
+    
 }
