@@ -6,21 +6,26 @@
 }
 
 #pick_ingredients_page form{
+    margin: auto;
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
+    width: 80%;
+    border: red 1px solid;
 }
 
 .ingredienst_div{
     border: 2px solid #EDB47F;
     border-radius: 5px;
-    width: 30%;
+    width: 40%;
     padding: 10px;
 }
 
-.ingredienst_div:nth-child(n + 3){
-    width: 61%;
+.ingredienst_div:nth-child(3n){
+    flex-basis: 81%;
+    /* width: 61%; */
+    /* flex-grow: 1; */
 }
 
 .ingredienst_div h2 {

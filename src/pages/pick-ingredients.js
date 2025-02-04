@@ -48,9 +48,31 @@ const templ =(list)=> html`
         <div class="ingredienst_div">
             <h2>Spices & Herbs</h2>
             <div class="svg_div">
-                
+                ${list['spices'].map(iTemp)}
             </div>
         </div>
+
+        <div class='ingredienst_div'>
+            <h2>Teas & Coffees</h2>
+            <div class="svg_div">
+            ${list['coffeas'].map(iTemp)}
+            </div>
+        </div>
+
+        <div class='ingredienst_div'>
+            <h2>Alcoholic Bases</h2>
+            <div class="svg_div">
+            ${list['alcohol'].map(iTemp)}
+            </div>
+        </div>
+
+        <div class='ingredienst_div'>
+            <h2>Other</h2>
+            <div class="svg_div">
+            ${list['other'].map(iTemp)}
+            </div>
+        </div>
+        <button type='submit'>Search</button>
     </form>
 </div>`
 
