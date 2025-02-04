@@ -576,7 +576,7 @@ const other = [
         <path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" transform=" translate(-16, -16)" d="M 8 3 L 8 29 L 24 29 L 24 18.453125 L 23.890625 18.480469 L 13.125 15.996094 L 10 15.371094 L 10 12 L 15 12 L 15 14.484375 L 17 14.9375 L 17 12 L 22 12 L 22 16.0625 L 24 16.515625 L 24 3 Z M 10 5 L 15 5 L 15 10 L 10 10 Z M 17 5 L 22 5 L 22 10 L 17 10 Z M 12.28125 17.867188 L 20.3125 19.480469 L 15.296875 20.878906 Z M 10 18.414063 L 14.703125 23.121094 L 22 21.085938 L 22 27 L 10 27 Z" stroke-linecap="round" />
         </g>
         </svg>`,
-        label:'chocolate',
+        label:'cocoa powder',
         p:'Chocolate'
     }
 ]
