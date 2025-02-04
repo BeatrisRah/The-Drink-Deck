@@ -11,7 +11,7 @@ const iTemp = (i) => html`
 
 const templ =(list)=> html`
 <div id='pick_ingredients_page'>
-    <form>
+    <form @submit=${formSubmit}>
         <div class='ingredienst_div'>
             <h2>Dairy & Non-Dairy Alternatives</h2>
             <h3>Milk</h3>
@@ -83,6 +83,9 @@ function buttonsToggle(e){
     e.currentTarget.classList.toggle('selected');
 }
 
+function formSubmit(e){
+    e.preventDefault()
+}
 
 
 export function pickIngredienst(ctx) {
