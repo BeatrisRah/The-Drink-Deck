@@ -5,6 +5,7 @@ import { updateNav } from "./nav.js";
 import { catalog } from "./pages/catalog.js";
 import { detailsPage } from "./pages/details.js";
 import { pickIngredienst } from "./pages/pick-ingredients.js";
+import { recipeResultsPage } from "./pages/recipe-result.js";
 
 
 
@@ -16,6 +17,7 @@ page('/',homeView)
 page('/catalog/:category', catalog)
 page('/catalog/:category/:drinkID', detailsPage)
 page('/pick-ingredients', pickIngredienst)
+page('/pick-ingredients/:ingredients', recipeResultsPage)
 page()
 
 
