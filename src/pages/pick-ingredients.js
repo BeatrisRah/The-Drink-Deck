@@ -3,7 +3,7 @@ import list from "../ingredientsList.js";
 
 const iTemp = (i) => html`
 <div class='ingredient_button'>
-    <button type='button'  aria-label="${i.label}">
+    <button type='button'  aria-label="${i.label}" @click=${buttonsToggle}>
         ${i.svg}
     </button>
     <p>${i.p}</p>
@@ -77,6 +77,11 @@ const templ =(list)=> html`
 </div>`
 
 
+function buttonsToggle(e){
+    console.log('work');
+    
+    e.currentTarget.classList.toggle('selected');
+}
 
 
 
