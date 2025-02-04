@@ -77,19 +77,23 @@ const templ =(list)=> html`
 </div>`
 
 
-function buttonsToggle(e){
-    console.log('work');
-    
+function buttonsToggle(e){    
     e.currentTarget.classList.toggle('selected');
 }
 
 function formSubmit(e){
     e.preventDefault()
+
+    const buttons = e.currentTarget.querySelectorAll('button')
+    const selectedLabels = Array.from(buttons)
+    .filter(button => button.classList.contains('selected'))
+    .map(button => button.getAttribute('aria-label'));
+    
+    console.log(selectedLabels);
+    
 }
 
 
 export function pickIngredienst(ctx) {
-    console.log();
-    
     ctx.render(templ(list))
 }
