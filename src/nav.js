@@ -5,6 +5,7 @@ const nav = document.querySelector('nav')
 const navTempl = (clickHandler) => html`
 <a class="nav-links" href="/">Home</a>
 <a class="nav-links" href="/catalog/all">Catalog</a>
+<a class="nav-links" href="/pick-ingredients">Ingredients</a>
 <a class="nav-links" href="/about">About</a>
 <a class="nav-links" href="/contact">Contact</a>
 
@@ -14,6 +15,7 @@ const navTempl = (clickHandler) => html`
 <div class="hamburger-content" toggle="closed">
     <a class="hamburger-links" href="/">Home</a>
     <a class="hamburger-links" href="/catalog/all">Catalog</a>
+    <a class="hamburger-links" href="/pick-ingredients">Ingredients</a>
     <a class="hamburger-links" href="/about">About</a>
     <a class="hamburger-links" href="/contact">Contact</a>
 </div>`
