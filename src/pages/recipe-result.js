@@ -30,6 +30,7 @@ export async function recipeResultsPage(ctx){
     ctx.render(section(true, [] , redirectPage))
     
     const matchesRecepies = await dbApi.getByingredients(ingredients);
+    ctx.changeBody('100vh')
     ctx.render(section(false, matchesRecepies , redirectPage.bind(ctx)))
     
 }
