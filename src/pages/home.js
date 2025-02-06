@@ -63,7 +63,7 @@ const template = (eventhandler) => html`
             <div class="drink-card" category-data="all" @click=${eventhandler} >
                 <div class="card-content-wrap">
                     <p class="card-title">All</p>
-                    <img src="public/all.png" alt="sesonal drinks category">
+                    <img src="/all.png" alt="sesonal drinks category">
                     <div class="card-line"></div>
                 </div>
                 
