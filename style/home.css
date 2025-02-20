@@ -233,12 +233,51 @@
 
 @media screen and (max-width: 425px){
 
-    #home{
-        border: red 1px solid;
-    }
     #home-wrapper{
         height: 50%;
         width: 90%;
     }
 
+    #home-headings h1{
+        font-size: 20px;
+        max-width: 80%;
+    }
+    #home-headings p{
+        font-size: 13px;
+        text-align: end;
+        width: 100%;
+    }
+
+    #card-content-wrapper{
+        width: 90%;
+    }
+
+    #card-wrapper{
+        margin-top: 25%;
+    }
+
+    .card-content-wrap img {
+        width: 60%;
+        bottom: -30%;
+    }
+
+    .drink-card:last-child img {
+        width: 35%;
+    }
+    .card-title{
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 320px){
+    #home-headings p{
+        
+        margin-top: 50%;
+    }
+    #card-wrapper{
+        margin-top: 30%;
+    }
+    .card-title{
+        font-size: 0.8em;
+    }
 }
