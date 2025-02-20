@@ -118,3 +118,83 @@
 #pick_ingredients_page form > button:hover{
     transform: translateY(-5px);
 }
+
+
+@media (max-width: 1024px){
+    #pick_ingredients_page form{
+        width: 100%;
+    }
+    .ingredienst_div:nth-child(3n) p{
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 768px){
+    .ingredient_button button{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .ingredient_button p{
+        font-size: 11px;
+    }
+    .ingredienst_div:nth-child(3n) p{
+        font-size: 11px;
+    }
+
+    .ingredienst_div:nth-child(3n) .svg_div{
+        gap: 15px;
+    }
+}
+
+@media (max-width: 425px){
+    #pick_ingredients_page{
+        width: 100%;
+    }
+    #pick_ingredients_page form{
+        width: 100%;
+    }
+    .ingredienst_div{
+        width: 65%;
+    }
+
+    .ingredienst_div:nth-child(3n){
+        flex-basis: 65%;
+    }
+
+    .ingredienst_div h2{
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .svg_div{
+        gap: 17px;
+        justify-content: center;
+
+    }
+    .ingredienst_div:nth-child(3n) .svg_div{
+        gap: 40px;
+    }
+
+    .ingredienst_div:nth-child(3n) p{
+        font-size: 10px;
+    }
+
+    .ingredienst_div:last-of-type{
+        margin: 0%;
+    }
+
+    .ingredienst_div:last-of-type .svg_div{
+        gap: 30px;
+    }
+}
+
+@media (max-width: 320px){
+    .svg_div{
+        gap: 30px;
+
+    }
+    .ingredienst_div:last-of-type .svg_div{
+        gap: 37px;
+    }
+}
