@@ -46,7 +46,6 @@ export async function detailsPage(ctx){
     
     try{
         const drink = await dbApi.getOne(drinkID);
-        // ctx.changeBody('fit-content')
         ctx.render(templ(drink))
     } catch(err){
         console.log(err);

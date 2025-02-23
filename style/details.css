@@ -213,3 +213,39 @@
         padding: 10px;
     }
 }
+
+
+@media (max-width: 425px){
+    .details_upper{
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .details_img_div{
+        height: fit-content;
+    }
+    .details_desription_titels{
+        margin-top: 2em;
+    }
+    .details_desription_titels > h1{
+        width: 90%;
+    }
+
+    .details_bottom{
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .details_ingredients{
+        width: 80%;
+    }
+
+    .details_preparation{
+        width: 90%;
+    }
+
+    .details_preparation ol{
+        margin-top: 1rem;
+    }
+
+}
