@@ -1,6 +1,6 @@
 #description_page{
     width: 100%;
-    height: 100vh;
+    height: 95%;
     margin-top: 2em;
     /* border: green 1px solid; */
 }
@@ -9,6 +9,7 @@
 #details_wrapper{
     width: 75%;
     margin: auto;
+    margin-bottom: 1rem;
     background-color: #F3F3DB;
     border-radius: 15px;
     padding: 30px 15px;
@@ -94,7 +95,7 @@
 
 .details_bottom{
     width: 98%;
-    /* height: 20vh; */
+    height: 35%;
     background-color: #ab7b7d33;
     border-radius: 10px;
     margin: auto;
@@ -105,7 +106,7 @@
 
 .details_bottom h1 {
     color: #E62E38;
-    padding: 1em;
+    padding: 0.7rem 2rem;
 }
 
 .details_ingredients{

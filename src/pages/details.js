@@ -42,13 +42,11 @@ const templ = (drink) => html`
 `
 
 export async function detailsPage(ctx){
-    const drinkID = ctx.params.drinkID;
-    console.log(drinkID);
-    
+    const drinkID = ctx.params.drinkID;    
     
     try{
         const drink = await dbApi.getOne(drinkID);
-        ctx.changeBody('70vw')
+        // ctx.changeBody('fit-content')
         ctx.render(templ(drink))
     } catch(err){
         console.log(err);
