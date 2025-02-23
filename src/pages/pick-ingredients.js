@@ -99,6 +99,6 @@ function formSubmit(e){
 
 
 export function pickIngredienst(ctx) {
-    ctx.changeBody('82vw')
+    ctx.changeBody('fit-content')
     ctx.render(templ(list, formSubmit.bind(ctx)))
 }
