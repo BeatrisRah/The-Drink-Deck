@@ -231,7 +231,13 @@
     }
 }
 
-@media screen and (max-width: 425px){
+@media screen and (max-width: 600px){
+    #home{
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 482px){
 
     #home-wrapper{
         height: 50%;
@@ -271,7 +277,6 @@
 
 @media screen and (max-width: 320px){
     #home-headings p{
-        
         margin-top: 50%;
     }
     #card-wrapper{
