@@ -215,7 +215,7 @@
 }
 
 
-@media (max-width: 425px){
+@media (max-width: 600px){
     .details_upper{
         flex-wrap: wrap;
         gap: 10px;
