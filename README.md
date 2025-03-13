@@ -19,7 +19,7 @@ Your ultimate destination for discovering delicious and creative drink recipes!
 
 - **Routing**: Page.js
 
-- **Database**: Firebase Firestore
+- **Database**: Firebase Realtime Database
 
 - **Deployment**: Vite Build + Firebase Hosting
 
